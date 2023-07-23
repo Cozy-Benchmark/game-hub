@@ -1,2 +1,5 @@
 # game-hub
- See directory of games 
+
+First Project for React
+
+See directory of games
