@@ -25,7 +25,10 @@ function App() {
         <Show above="lg">
           <GridItem area="aside" paddingX={5}>
             {/* gets notified and rerenders and passes to gamegrid*/}
-            <GenreList onSelectedGenre={(genre) => setSelectedGenre(genre)} />
+            <GenreList
+              selectedGenre={selectedGenre}
+              onSelectedGenre={(genre) => setSelectedGenre(genre)}
+            />
           </GridItem>
         </Show>
         <GridItem area="main">
