@@ -10,7 +10,7 @@ import useGenre, { GenreProp } from "../../hooks/useGenre";
 import getCroppedImageUrl from "../../services/image-url";
 
 interface GenreListProp {
-  onSelectedGenre: (genre: GenreProp) => void;
+  onSelectedGenre: (genre: GenreProp) => void; // notify parent that genre is selected
 }
 const GenreList = ({ onSelectedGenre }: GenreListProp) => {
   const { data, isLoading, error } = useGenre();

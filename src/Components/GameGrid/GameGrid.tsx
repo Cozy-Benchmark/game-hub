@@ -6,11 +6,11 @@ import GameCardContainer from "../GameCardContainer/GameCardContainer";
 import { GenreProp } from "../../hooks/useGenre";
 
 interface GameGridProp {
-  selectedGenre: GenreProp | null;
+  selectedGenre: GenreProp | null; // recieves the selected genre
 }
 
 const GameGrid = ({ selectedGenre }: GameGridProp) => {
-  const { data, error, isLoading } = useGames(selectedGenre);
+  const { data, error, isLoading } = useGames(selectedGenre); // passes selected genre to games hook
   const skeletons = [1, 2, 3, 4, 5, 6];
 
   return (
