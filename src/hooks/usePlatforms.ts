@@ -1,10 +1,10 @@
 import platforms from '../data/platfroms'
 
-interface PlatformProp{
-    id: number;
-    name: string;
-    slug: string;
-}
+// interface PlatformProp{
+//     id: number;
+//     name: string;
+//     slug: string;
+// }
 
 const usePlatforms = () => ({data: platforms, isLoading: false, error: null});
 
