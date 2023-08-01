@@ -21,7 +21,9 @@ const useGames = (
   {params: { 
     genres: gameQuery.genre?.id, 
     platforms: gameQuery.platform?.id, ordering: 
-    gameQuery.sortOrder}}, 
+    gameQuery.sortOrder,
+    search: gameQuery.searchText,
+  }}, 
   [gameQuery]) // recieves the selected genre and platform
 
 export default useGames
