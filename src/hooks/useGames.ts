@@ -18,7 +18,10 @@ export interface GameProp {
 const useGames = (
   gameQuery: GameQuery) => 
   useData<GameProp>('/games', 
-  {params: { genres: gameQuery.genre?.id, platforms: gameQuery.platform?.id}}, 
+  {params: { 
+    genres: gameQuery.genre?.id, 
+    platforms: gameQuery.platform?.id, ordering: 
+    gameQuery.sortOrder}}, 
   [gameQuery]) // recieves the selected genre and platform
 
 export default useGames
