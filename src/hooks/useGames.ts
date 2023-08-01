@@ -1,3 +1,4 @@
+import { GameQuery } from "../App";
 import useData from "./useData";
 import { GenreProp } from "./useGenre";
 
@@ -16,9 +17,9 @@ export interface GameProp {
   }
 
 const useGames = (
-  selectedGenre: GenreProp | null, selectedPlatform: Platform | null) => 
+  gameQuery: GameQuery) => 
   useData<GameProp>('/games', 
-  {params: { genres: selectedGenre?.id, platforms: selectedPlatform?.id}}, 
-  [selectedGenre?.id, selectedPlatform?.id]) // recieves the selected genre and platform
+  {params: { genres: gameQuery.genre?.id, platforms: gameQuery.platform?.id}}, 
+  [gameQuery]) // recieves the selected genre and platform
 
 export default useGames
