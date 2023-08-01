@@ -16,14 +16,14 @@ function App() {
         }}
         templateColumns={{
           base: "1fr", // 1 coulmun takes every space
-          lg: "200px 1fr", // side panel takes 200px, everything else takes every available space
+          lg: "240px 1fr", // side panel takes 200px, everything else takes every available space
         }}
       >
         <GridItem area="nav">
           <Navbar />
         </GridItem>
         <Show above="lg">
-          <GridItem area="aside" paddingX={5}>
+          <GridItem area="aside" paddingX={3}>
             {/* gets notified and rerenders and passes to gamegrid*/}
             <GenreList
               selectedGenre={selectedGenre}
